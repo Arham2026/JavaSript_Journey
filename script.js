@@ -30,8 +30,5 @@ let isloggedIn = false
 
 //  Object
 
-console.log(typeof (age));
+// console.log(typeof (age));
 // 
-// null is a Object
-
-

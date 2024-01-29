@@ -15,7 +15,7 @@
 let isloggedIn =1
 
 let bolleanLoggedIn = Boolean(isloggedIn)
-console.log(bolleanLoggedIn)
+// console.log(bolleanLoggedIn)
 // 1 => True
 // 0 =>false
 
@@ -27,8 +27,8 @@ console.log(bolleanLoggedIn)
 let someNumber = 78
 
 let stringnumber = String(someNumber)
-console.log(stringnumber);
-console.log(typeof stringnumber);
+// console.log(stringnumber);
+// console.log(typeof stringnumber);
 
 // gets converted into the String type.
 
@@ -44,4 +44,38 @@ let value = 3
 //  /normal division
 //  % remainder.
 
+// null is a Object
+
+// Operations in the Strings 
+
+let str1 = "arham"
+let str2 = " shajahan"
+
+// console.log(str1 + str2);
+
+// using of the paranthesis see the Pratical review
+
+//COnfusion in the operation wjen String is Used
+
+// console.log(2 + "3");
+// console.log(3 + 4 + "4");
+
+// ex for the bad Code
+
+// console.log(+true);
+// it just gives the value 1.
+
+let gameCounter = 100
+gameCounter++;
+
+// precedence and post fix operator.(diff)
+
+// for Ex :(post  inc)
+let x = 3
+let y = x++
+//   here x becomes 4 but y still is assigned with the 3
+// when we use the value of the x again we can see it's value changed.
+console.log(x,y);
+
+// in prefix increment the both gets incremrnted at the time
 
