@@ -32,3 +32,16 @@ console.log(typeof stringnumber);
 
 // gets converted into the String type.
 
+
+// operations
+
+let value = 3
+ let negValue = -value
+
+//  console.log(2+2);
+//  console.log(2**2); 
+//  **power
+//  /normal division
+//  % remainder.
+
+
