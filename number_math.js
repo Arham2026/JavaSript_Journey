@@ -3,13 +3,18 @@
 
 const name = new String("arham")
 
-console.log(name);
+// console.log(name);
 
 // we can change a number to string usse 
 
 // to string() converts to the string and gives some methods that could be used
 // to precision() helps to round off the decimal values
 // to fixed() to fix how many numbers should be there in the decimal place
+
+const number = new Number(100.345)
+console.log(number.toFixed(2));
+console.log(number.toPrecision(4));
+// the number you include inside is about the number of digits
 
 // tolocalstring() helps us to define the numbers in the US standards
 // use 'en-IN' inside the brack to implement the Indian standard
