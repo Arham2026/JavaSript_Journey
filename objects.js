@@ -44,13 +44,20 @@ console.log(user["full_name"]);
 
 // Changing the values by 
 
-Object.freeze(user)
+// Object.freeze(user)
 user.name = "sorham"
-console.log(user);
+// console.log(user);
 
+// note :
 // If i use the method to freeze the object then i will not
 // be able to make a change.
 
 
+// now playing with the function
 
+user.aim = function(){
+    // user.name = "ohhh"
+    console.log(`my name is ${this.name}, I know that is Wierd`);
+}
 
+console.log(user.aim());
