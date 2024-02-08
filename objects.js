@@ -1,10 +1,16 @@
-// singleton => when objects are created by constructed
-// Object.create
+// constructors 
+// Object.create()
+// using new
+// multiple instance
 
-// object Literals : normal declaration
 
+// object Literals : 
+// An object created by the object literals is a singleton
+// single instance
 // Key vlaue pair
 
+// constructor functions can be used to create objects 
+// that inherit from other objects, while object literals cannot.
 
 // declaring the Symbol 
 
