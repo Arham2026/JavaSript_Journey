@@ -6,7 +6,6 @@ function hi(){
 
 // hi()
 
-
 // why we use it ? => To remove pollution of the global scope
 // How to write the IIfe ()()
 
