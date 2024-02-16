@@ -25,3 +25,4 @@ const debitCard = true
  if(loggedinEmail || LoggedinGoogle){
     console.log("allow him/her to sign in");
  }
+console.log(typeof(LoggedinGoogle));
