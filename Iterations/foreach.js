@@ -39,7 +39,25 @@ const MyCoding = [
 // this is very commonn operation
 
 MyCoding.forEach((Item) => {
-    console.log(Item.language);
+    // console.log(Item.language);
 })
 
 // Using the Dot function in the arrays.
+
+// filter returns the value but for each loop doesn't return the values
+const mynums = [1,2,3,4,5,6]
+
+let ans = mynums.filter( (num) => num>3  )
+// note : If you write the paranthesis in the filter loop then you need to write the return keyword.
+
+// console.log(ans);
+
+let ans1 = mynums.filter( (num) =>{
+    return num>3
+}   )
+
+// console.log(ans1);
+
+
+
+
