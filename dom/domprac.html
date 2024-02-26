@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_Practice</title>
+    <script src="domprac.js"></script>
+</head>
+<body style="background-color: #212121; color:#ffffff ">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    
+function addlanguage(langname){
+    
+    //building a function to add a list
+    const li = document.createElement('li')
+    li.innerHTML = `${langname}`
+    document.querySelector('.language').appendChild(li)
+   
+}
+addlanguage("python")
+addlanguage("c")
+
+//this method is not optimised one because everytime you
+// call the functionit has to go through all the list that is present there in that div or the Block
+
+function addoptilang(langname){
+   const li = document.createElement('li');
+    li.appendChild(document.createTextNode(langname))
+    // using the appendChild while trying to create a list would be recommendable for optimisation.
+    //createTextNode creates a text node which returns a text object.
+    document.querySelector('.language').appendChild(li)
+}
+
+addoptilang('golang')
+
+//edit
+
+//replacing an element with the other
+// => select the element which should be replaced
+// => create the new element which you have to repace with
+// => use the method replacewith() with the selected element
+
+const secondlang = document.querySelector('li:nth-child(2)')
+const newli = document.createElement('li')
+newli.textContent = "Mojo"
+secondlang.replaceWith(newli)
+
+//exercise : Here I should replace the First language with the c
+
+const firstlang = document.querySelector('li:first-child')
+firstlang.outerHTML = '<li>TypeScript</li>'
+
+//remove 
+
+const lastlang = document.querySelector('li:last-child')
+lastlang.remove()
+
+
+</script>
+
+</html>
