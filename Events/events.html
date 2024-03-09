@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+     <!-- javascript Events runs sequentially. 
+
+    Things to ponder and think with:
+     type 
+     time stamp 
+     default prevented,target,toElement,srcElement, currentElement 
+
+ propagation  -->
+
+ <div>
+    <ul id="images">
+        <li><img width="200px"   src="https://images.pexels.com/photos/40803/lion-animal-predator-big-cat-40803.jpeg?auto=compress&cs=tinysrgb&w=600" alt="not_available" id="Lion"></li>
+        <li><img width="200px"   src="https://images.pexels.com/photos/458976/pexels-photo-458976.jpeg?auto=compress&cs=tinysrgb&w=600" alt="not_available" id="squirrel"></li>
+        <li><img width="200px"   src="https://images.pexels.com/photos/162140/duckling-birds-yellow-fluffy-162140.jpeg?auto=compress&cs=tinysrgb&w=600" alt="not_available" id="duck"></li>
+        <li><a href="https://www.youtube.com/channel/UCB-xJusLdxTOKGf6kDrUH8A" id="Youtube_channel" target="_blank">Youtube_channel</a></li>
+    </ul>
+ </div>
+
+<script>
+   // document.getElementById('images').addEventListener('click',function(e){
+    //    console.log("you Have clicked a Image");
+   // },false)
+
+   // document.getElementById('Lion').addEventListener('click',function(e){
+   //     console.log("you Have clicked a lion");
+   //     e.stopPropagation()
+        //the Above line is to stoop the bubbling propagation.
+  //  },false)
+
+    // here when you click on the lion then lion message comes first then the image message comes that's the event bubbling which is a default mode.
+
+    //now we have to learn how to prevent how to prevent these events from happening.
+    //so let's take the youtube link make the event stop
+
+    document.getElementById('Youtube_channel').addEventListener('click',function(e){
+        e.preventDefault();
+        e.stopPropagation();
+    },false)
+
+
+    document.getElementById('images').addEventListener('click',function(e){
+       console.log(e.target.parentNode);
+// This gives the parent node that is ul.
+
+// we also have the accessibility for the tag name here so if we want to make the image disappear when we click we 
+// can just target the tag name.
+        if(e.target.tagName==="IMG"){
+        let removeIt = e.target.parentNode;
+        removeIt.remove()
+        }
+       
+       //or
+      // removeIt.parentNode.removeChild(removeIt)
+    },false)
+
+</script>
+        
+</body>
+</html>
