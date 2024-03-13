@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Code with Me</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    //after 2 seconds it gets executed.
+   const arham = function(){
+    console.log("arham");
+   }
+   //the argument is a handler (where you give just the reference to the function)
+    setTimeout(arham,2000);
+
+const changeText = function(){
+   const change = document.querySelector('h1');
+   change.innerHTML = "I am a Good Boy";
+
+}
+
+const changeMe = setTimeout(changeText,2000);
+   
+//how to clear the Time out
+
+// there are two ways to apply this
+
+
+//one way (setting timeout for the Event)
+document.querySelector('button').addEventListener('click',function(){
+    clearTimeout(changeMe)
+    console.log("stooped")
+})
+
+//other way with using the setTimeout
+
+//clearTimeout(changeMe)
+
+
+
+
+
+</script>
+
+</html>

@@ -34,7 +34,7 @@
    // document.getElementById('Lion').addEventListener('click',function(e){
    //     console.log("you Have clicked a lion");
    //     e.stopPropagation()
-        //the Above line is to stoop the bubbling propagation.
+        //the Above line is to stop the bubbling propagation.
   //  },false)
 
     // here when you click on the lion then lion message comes first then the image message comes that's the event bubbling which is a default mode.
@@ -44,7 +44,11 @@
 
     document.getElementById('Youtube_channel').addEventListener('click',function(e){
         e.preventDefault();
-        e.stopPropagation();
+        // the above code stops the default process of that event.
+
+       // e.stopPropagation(); 
+       //the above code stops bubbling of the event propagation
+       
     },false)
 
 
