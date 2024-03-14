@@ -7,12 +7,56 @@
 </head>
 <body>
     <h1>Set Interval </h1>
-    <button id="Start">start</button>
+    <button id="start">start</button>
     <button id="stop">stop</button>
 </body>
 <script>
-    
 
+   // const sayDate =(function(string){
+   //     console.log(string,Date.now());   
+   // })
+
+
+    //const stop = setInterval(sayDate,1000,"hi")
+
+     //How to stop the continuous flow of the setInterval.
+
+    // clearInterval(stop)
+
+     //now we are gonna make a small project where we gonna use the above connect setInterval to a Event Listener
+
+let IntervalId 
+     
+const starttheLoop = function(string){
+
+    if(!IntervalId){
+        IntervalId =   setInterval(print,1000)
+    }
+  // the above makes the code clean and proffessional and then solves some problem while clicking the start button again and again
+
+    function print(){
+        console.log('arham')
+    }
+    
+}
+const stoptheLoop  = function(){
+    clearInterval(IntervalId)
+    IntervalId = null;
+    //the above line is for the clean code and the proffessional code
+}
+
+
+document.querySelector('#start').addEventListener('click',starttheLoop);
+document.querySelector('#stop').addEventListener('click',stoptheLoop);
+
+
+
+//edge cases :
+//for the clean code
+        
+        
+     
+     
 
 
 </script>
