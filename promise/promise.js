@@ -133,3 +133,5 @@ fetch('https://api.github.com/users/Arham2026')
 })
 .catch((error) => 
     console.log(error))
+
+// More about the fetch in the screenshot in the folder
